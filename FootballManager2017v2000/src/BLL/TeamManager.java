@@ -19,6 +19,7 @@ public class TeamManager
 { 
     /**
      * Array of the class Group that refers to an array of the Team class.
+     * Shuffles teams into A-D groups.
      * @param teams
      * @return 
      */
@@ -27,8 +28,7 @@ public class TeamManager
         ArrayList<Group> allGroups = new ArrayList<>();
         for (int i = 0; i < 4; i++) 
         {
-            allGroups.add(new Group());
-            
+            allGroups.add(new Group());   
         }
         Collections.shuffle(teams);
         int counter = 0;

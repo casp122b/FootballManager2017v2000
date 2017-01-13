@@ -91,7 +91,6 @@ public class MainViewController implements Initializable {
         dataBind();
         for (int i = 0; i < 16; i++) {
             teamsTable.getItems().add(new Team(i + "", 0, 0, 0, 0));
-
         }
     }
 
@@ -100,7 +99,6 @@ public class MainViewController implements Initializable {
      * colB1, colC1 and colD1.
      */
     private void dataBind() {
-//        teamModel = new TeamModel();
         teamsTable.setItems(teamModel.getTeamsA());
         teamsTable.setItems(teamModel.getAllTeams());
         teamView.setCellValueFactory(value -> new SimpleObjectProperty<>(value.getValue().getTeamName()));

@@ -26,7 +26,6 @@ public class TeamModel
     private ObservableList<Round> matchB;
     private ObservableList<Round> matchC;
     private ObservableList<Round> matchD;
-    private ObservableList<Match> matchHomeScore;
     private static TeamModel instance;
     
     /**
@@ -43,11 +42,10 @@ public class TeamModel
         matchB = FXCollections.observableArrayList();
         matchC = FXCollections.observableArrayList();
         matchD = FXCollections.observableArrayList();
-        matchHomeScore = FXCollections.observableArrayList();
     }
     
     /**
-     * This method makes it possible to instanciate TeamModel from another class.
+     * This method makes it possible to instantiate TeamModel from another class.
      * @return 
      */
     public static TeamModel getInstance()
@@ -98,19 +96,10 @@ public class TeamModel
         Team team = new Team(teamName, teamID, scoredGoals, matchesPlayed, numberOfPoints);
         allTeams.add(team);
     }
-    public void addMatchScore(int matchID, Team homeTeam, Team awayTeam, int homeScore, int awayScore){
-        Match match = new Match(matchID, homeTeam, awayTeam, homeScore, awayScore);
-        matchHomeScore.add(match);
-    }
     public ObservableList<Team> getAllTeams()
     {
         return allTeams;
     }
-    public ObservableList<Match> getAllGoals()
-    {
-        return matchHomeScore;
-    }
-
     public ObservableList<Round> getRoundA() {
         return matchA;
     }

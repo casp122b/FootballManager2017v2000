@@ -35,22 +35,17 @@ public class TeamPlayViewController implements Initializable {
     private TableColumn<Round, String> homeTeamA1Col;
     @FXML
     private TableColumn<Round, String> guestTeamA1Col;
-//    private TableColumn<Round, String> homeTeamBCol;
-//    private TableColumn<Round, String> guestTeamBCol;
     public TeamModel teammodel;
     public ObservableList<Match> teamPlay;
     public ObservableList<Team> groupA;
     public ObservableList<Team> groupB;
     public ObservableList<Team> groupC;
     public ObservableList<Team> groupD;
-//    public int[] roundList = new int[6];
+
     private final TeamModel teamModel = TeamModel.getInstance();
 
     @FXML
     private TableView<Round> matchATable;
-//    private TableView<Round> matchBTable;
-//    private TableView<Round> matchDTable;
-//    private TableView<Round> matchCTable;
     @FXML
     private TableColumn<Round, Integer> colAHS;
     @FXML
@@ -103,8 +98,6 @@ public class TeamPlayViewController implements Initializable {
     private TableColumn<Round, String> hometeamD2Col;
     @FXML
     private TableColumn<Round, String> guestTeamD2Col;
-//    @FXML
-//    private TableView<?> x1;
     @FXML
     private TableColumn<Round, Integer> roundColC;
     @FXML
@@ -155,7 +148,7 @@ public class TeamPlayViewController implements Initializable {
 
     /**
      * Sets teams up against each other following the rules set for the
-     * assignment.
+     * assignment. Adds new matches and new rounds.
      *
      * @param groupA
      * @param groupB
