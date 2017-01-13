@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.SemifinalViewController">
+   <children>
+      <Button fx:id="btnClose" layoutX="366.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnCloseActionPerformed" text="Close" />
+      <TableView fx:id="tableviewSemifinal" layoutX="37.0" layoutY="58.0" prefHeight="250.0" prefWidth="370.0">
+        <columns>
+          <TableColumn fx:id="colHomeTeam" prefWidth="185.0" text="HomeTeam" />
+          <TableColumn fx:id="colVisitors" prefWidth="184.0" text="Visitors" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnGrandFinale" layoutX="225.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnFinalActionPerformed" text="Go to grand finale" />
+   </children>
+</AnchorPane>
