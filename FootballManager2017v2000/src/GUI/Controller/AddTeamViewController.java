@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 /**
  * FXML Controller class
  *
@@ -23,7 +24,7 @@ public class AddTeamViewController implements Initializable {
 
     @FXML
     private Button addTeamToTableView;
-    
+
     private MainViewController main;
     @FXML
     private TextField txtTeamName;
@@ -39,46 +40,41 @@ public class AddTeamViewController implements Initializable {
     int clickCount = 0;
     @FXML
     private Button editTeam;
-    int editCounter=0;
+    int editCounter = 0;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    public void setModel(TeamModel model)
-    {
-        this.teamModel = model;
-    }
-    /**
-     * Sets the MainViewController as main window.
-     * @param aThis 
-     */
-    void setMainWindow(MainViewController aThis) 
-    {
-        main = aThis;
-    }
-    //adds team to teamsTable and after 16 teams have been added closes the window
-     @FXML
-    private void addTeamToTableView(ActionEvent event) 
-    {
-        teamModel.addTeam(txtTeamName.getText(), Integer.parseInt(txtTeamID.getText()), 
-                                                 Integer.parseInt(txtTeamGoals.getText()), 
-                                                 Integer.parseInt(txtTeamPoints.getText()), 
-                                                 Integer.parseInt(txtMatchesPlayed.getText()));
-        clickCount++;
-        if(clickCount==16){
-        Stage stage = (Stage) addTeamToTableView.getScene().getWindow();
-        stage.close();
-    }
-    
-    /**
-     * sets the main window
-     * @param aThis 
-     */
     }
 
-  
-    
+    public void setModel(TeamModel model) {
+        this.teamModel = model;
+    }
+
+    /**
+     * Sets the MainViewController as main window.
+     *
+     * @param aThis
+     */
+    void setMainWindow(MainViewController aThis) {
+        main = aThis;
+    }
+
+    //adds team to teamsTable and after 16 teams have been added closes the window
+    @FXML
+    private void addTeamToTableView(ActionEvent event) {
+        teamModel.addTeam(txtTeamName.getText(), Integer.parseInt(txtTeamID.getText()),
+                Integer.parseInt(txtTeamGoals.getText()),
+                Integer.parseInt(txtTeamPoints.getText()),
+                Integer.parseInt(txtMatchesPlayed.getText()));
+        clickCount++;
+        if (clickCount == 16) {
+            Stage stage = (Stage) addTeamToTableView.getScene().getWindow();
+            stage.close();
+        }
+    }
+
 }
