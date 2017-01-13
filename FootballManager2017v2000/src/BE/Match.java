@@ -8,7 +8,7 @@ package BE;
 
 /**
  *
- * @author FrederikD
+ * @author Jens, Patrick, Casper, Frederik
  */
 public class Match {
     private int matchID;

@@ -5,7 +5,6 @@
  */
 package GUI.Model;
 
-import BE.Match;
 import BE.Round;
 import BE.Team;
 import javafx.collections.FXCollections;

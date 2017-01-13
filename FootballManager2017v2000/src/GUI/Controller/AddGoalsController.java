@@ -18,7 +18,7 @@ import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author FrederikD
+ * @author Jens, Patrick, Casper, Frederik
  */
 public class AddGoalsController implements Initializable {
 
