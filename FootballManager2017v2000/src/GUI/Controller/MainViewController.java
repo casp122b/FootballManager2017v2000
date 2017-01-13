@@ -247,9 +247,9 @@ public class MainViewController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/EditTeams.fxml"));
         Parent root = loader.load();
 
-        EditTeamViewController songController = loader.getController();
+        EditTeamViewController editController = loader.getController();
 
-        songController.setModel(teamModel);
+        editController.setModel(teamModel);
 
         // Sets new stage as modal window
         Stage stage = new Stage();
